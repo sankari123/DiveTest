@@ -59,12 +59,11 @@
             'OK'                  // buttonName
         );
 	//alert("	No network connection.Please turn it on");
-	
-    }
+	window.plugins.spinnerDialog.hide();		
+   }
    else
       {
-	      msg='Detecting your location... Please wait!';
-	window.plugins.spinnerDialog.show(null,'Detecting your location... Please wait!');
+	  window.plugins.spinnerDialog.show(null,'Detecting your location... Please wait!');
       }
 }
 	function alertDismissed1()
