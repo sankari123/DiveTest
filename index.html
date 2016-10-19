@@ -59,11 +59,12 @@
             'OK'                  // buttonName
         );
 	//alert("	No network connection.Please turn it on");
-	window.plugins.spinnerDialog.hide();		
+	//window.plugins.spinnerDialog.hide();		
    }
    else
       {
-	  window.plugins.spinnerDialog.show(null,'Detecting your location... Please wait!');
+	 window.plugins.spinnerDialog.show(null,'Detecting your location... Please wait!');
+	  getLoc();
       }
 }
 	function alertDismissed1()
@@ -646,7 +647,7 @@ body, html {
 	.optgroup { font-size:10px; }
 </style>
 	</head>
-<body onload="getLoc();">
+<body>
 	<table width="100%"  cellspacing='0' cellpadding='0'>
 			<tr height='40px' bgcolor="#003366"><td colspan=2 align='center'><font face='arial' color='white'><b>DIVE</b></font></td></tr>
 		
