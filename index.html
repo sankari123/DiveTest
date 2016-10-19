@@ -52,7 +52,7 @@
      var networkState = navigator.connection.type;
             if(navigator.connection.type == Connection.NONE) {        
         navigator.notification.alert(
-            'No network connection... Please turn it on',  // message
+            'No network connection... Please turn it on..',  // message
             alertDismissed1,         // callback
             'Wifi Status',            // title
             'OK'                  // buttonName
@@ -68,12 +68,13 @@
 }
 	function alertDismissed1()
 	{
-	navigator.device.exitApp();
+	navigator.app.exitApp();
 	}
 		function onDeviceReady()
 		{
 		
 		checkConnection();
+			
 		window.plugins.tts.startup(startupWin, fail);
 		
 		document.addEventListener("backbutton", function (e) {
