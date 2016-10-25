@@ -37,7 +37,6 @@
   <gap:plugin name="org.apache.cordova.media"/>
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
-  <gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" />
   <gap:plugin name="org.apache.cordova.vibration"/>
   <plugin name="fr.louisbl.cordova.gpslocation" spec="0.1.0" source="pgb" />
   <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" />
