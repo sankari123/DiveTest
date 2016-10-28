@@ -295,11 +295,10 @@ a:hover, a:active { text-decoration: none; color:black }
 	
 body, html {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
-    overflow:scroll;
-    
+      
 }
    
  .hideDontTakeUpSpace
@@ -308,18 +307,7 @@ body, html {
         }
 
 .btn1 {  background-color: transparent; border: 0; padding: 0; font-weight: bold;}
-.some-panel{
-    position: relative;
-    width: 123px;
-    height 321px;  
-}
-.map-wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}	
+
 
 </style>
 	</head>
@@ -328,10 +316,8 @@ body, html {
 			<tr height='40px' bgcolor="#003366"><td colspan=2 align='center'><font face='arial' color='white'><b>DIVE</b></font></td></tr>
 		
 	</table>
-<div class="some-panel">
-    <div class="map-wrapper">
-        <div id="map" style="width:100%;height:100%;"></div>
-    </div>
+<div class="block halfrect" style="height:100%">
+  <div id="map" style="height:100%;"></div>
 </div>
 		
 <!--<div id="map" style="position:fixed;width:100%;height:500px;"></div>	-->
