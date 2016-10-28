@@ -34,7 +34,11 @@
 		var fone;
 	
 		document.addEventListener("deviceready",onDeviceReady,false);
+		document.addEventListener("backbutton", function (e) {
+        	e.preventDefault(); 
+		navigator.notification.confirm("Do you want to exit DIVE?", onConfirmExit, "DIVE", "Yes,No");    }, false );
 		//window.onload = function(){ document.getElementById("loading").style.display = "none" } 
+	
 	window.document.addEventListener('orientationchange', function() {
   var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g);
   var viewportmeta = document.querySelector('meta[name="viewport"]');
@@ -75,11 +79,9 @@
 		
 		checkConnection();
 			
-		window.plugins.tts.startup(startupWin, fail);
+		//window.plugins.tts.startup(startupWin, fail);
 		
-		document.addEventListener("backbutton", function (e) {
-        	e.preventDefault(); 
-		navigator.notification.confirm("Do you want to exit DIVE?", onConfirmExit, "DIVE", "Yes,No");    }, false );
+		
 		}
 	
 		function onConfirmExit(button) {
