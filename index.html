@@ -106,16 +106,7 @@ function ajaxCall() {
 	
 	document.getElementById("map").style.display="block";
 	document.getElementById("map").style.visibility=true;
-	document.getElementById("lst_mnu").style.display="none";
-	document.getElementById("lst_mnu").style.visibility=false;
-	document.getElementById("smsBar").style.display="none";
-	document.getElementById("smsBar").style.visibility="false";
-	document.getElementById("inTab").style.display="none";
-	document.getElementById("inTab").style.visibility="false";
-	document.getElementById("route_canvas").style.display="none";
-	document.getElementById("route_canvas").style.display="none";
-	document.getElementById("panel").style.visibility="false";
-	document.getElementById("panel").style.visibility="false";
+	
 	
 				
 			zoom=13;
@@ -284,24 +275,7 @@ icon = icon + ".png";
 	
 	
 }
-function showTbl()
-	{
-		lst_mnu.innerHTML=multiArr.length+" Results Found";
-	document.getElementById("map").style.display="none";
-	document.getElementById("map").style.visibility=false;
-	document.getElementById("lst_mnu").style.display="block";
-	for (var i = 0, len = multiArr.length-1; i < len; i++) {
-     
-	     imgName="http://www.writeacademy.in/dive/images/"+multiArr[i][0].replace(/\s/g, '_')+'.jpg';
-		//alert(len+"-"+imgName);
-	  //lst_mnu.innerHTML = lst_mnu.innerHTML +"<BR>"+"<input type='text' name='mytext'+ i value='"+aName[0][0]+"'>"
-//	  lst_mnu.innerHTML = lst_mnu.innerHTML +"<hr>"+"<img src='"+imgName+"' valign='middle' width='60px' height='60px'>"+"<input type='text' disabled='disabled' style='border:none;' size='12' name='mytext'+ i value='"+ multiArr[i][0]+"'>"+"<input type='text' size=5 style='border:none'  disabled='disabled' name='mytext'+ i value='"+Math.round((parseFloat(multiArr[i][3])*Math.pow(10,2)))/Math.pow(10,2)+"'>"+"<input type='button' style='border:0;background:url(arrow.png);background-repeat: no-repeat;color:white;' value='"+ i+"' onclick='call_hotel(this.value);'>"+"<BR>"
-	  
-	  lst_mnu.innerHTML=lst_mnu.innerHTML +"<hr>"+"<table width='100%' padding='0' spacing='0'><tr><td><img src='"+imgName+"' valign='middle' width='60px' height='60px'></td><td align='left'>"+multiArr[i][0]+"</td><td align='left'>"+Math.round((parseFloat(multiArr[i][3])*Math.pow(10,2)))/Math.pow(10,2)+"</td><td align='left'><input type='button' style='border:0;background:url(arrow.png);background-repeat: no-repeat;color:white;' value='"+ i+"' onclick='call_hotel(this.value);'>"+"</td></tr>"
-	}
-		lst_mnu.innerHTML=lst_mnu.innerHTML+"</table>";
-	}
-	
+
 	function call_hotel(h)
 	{
 		//addr=multiArr[h][0]+", "+multiArr1[h][0]+", "+multiArr1[h][1]+", "+multiArr1[h][2]+", "+multiArr1[h][3];
@@ -322,250 +296,6 @@ function showTbl()
 	
 	
 	
-	function call3_hotel(h)
-	{
-		
-		lat2=multiArr[h][1];
-		long2=multiArr[h][2];
-		window.plugins.ChildBrowser.showWebPage('https://www.google.com/maps?saddr=' + x + ',' + y + '&daddr=' + lat2 + ',' + long2 + '',
-       		 {showLocationBar: true});
-
-	}
-	function call_hotel1(h)
-	
-	{
-		//screen.lockOrientation('landscape');
-		if(h!=multiArr.length)
-		{
-		//alert(h);
-		fone=parseInt(multiArr1[h][4]);	
-		lat2=multiArr[h][1];
-		long2=multiArr[h][2];
-		
-		smsBar.innerHTML="<table width='100%' cellpadding='0' cellspacing='0'><tr height='23px' bgcolor='#f7f7f7'><td colspan=2 align='right'> <input type=button value='Back ' class='btn1' onclick='ajaxCall();' /></td></tr> ";
-		//locArr[0] contains full address of a hotel lat,long,hotel name,add1,add2,add3,add4,add5,phone
-		imgNam="http://www.writeacademy.in/dive/images/"+multiArr[h][0].replace(/\s/g, '_')+'.jpg';
-		//alert(imgNam);
-						
-		document.getElementById("map").style.display="none";
-		document.getElementById("map").style.visibility="false";
-		document.getElementById("lst_mnu").style.display="none";
-		document.getElementById("lst_mnu").style.visibility="false";
-		document.getElementById("smsBar").style.display="block";
-		document.getElementById("smsBar").style.visibility="true";
-		document.getElementById("route_canvas").style.display="block";
-		document.getElementById("route_canvas").style.visibility="true";
-			document.getElementById("panel").style.display="block";
-		document.getElementById("panel").style.visibility="true";
-		
-		
-		//sms.innerHTML=multiArr[hNam][0];
-	         addr=multiArr[h][0]+", "+multiArr1[h][0]+", "+multiArr1[h][1]+", "+multiArr1[h][2]+", "+multiArr1[h][3];
-
-		smsBar.innerHTML=smsBar.innerHTML+"<tr><td>"+"<img src='"+imgNam+"' width='50px' height='50px' valign='middle' style='display:block;'>"+"</td><td><textarea rows=3 cols=30 disabled style='font-size:10px;background-color:transparent; border:0px; padding:0px;'>"+addr+"</textarea></td></tr><tr><td colspan=2><font size=2>Distance:</font>&nbsp;<font size=2 color=red>"+Math.round((parseFloat(multiArr[h][3])*Math.pow(10,2)))/Math.pow(10,2)+" </font><font size=2>miles</font></td></tr></table>";
-		ini_route(h);
-		showDiv();
-		}		
-				
-			
-	}
-	function showDiv()
-	
-	{
-		//alert('in');
-		document.getElementById("inTab").style.display="block";
-		document.getElementById("inTab").style.visibility="true";
-		//inTab.innerHTML="<table width='100%'>";
-		inTab.innerHTML="<table width='100%' bgcolor='#e0e1e1'><tr><td width='50%' align='center'><a style='text-decoration:none;color: #000000' href=tel:"+fone+"><b>Call</b></a></td><td width='50%' align='center'><input type='button' class='btn1' onclick='speechStart();' value='Voice' /></td></tr><table>"
-	//document.write('<a href=tel:"' + fone + '">Call Now</a>');
-	}
-	
-var app = {
-    sendSms: function() {
-       // alert('click');
-        var number = fone;
-	var message = "Pl. book a table"
-	var intent = 'INTENT'; //leave empty for sending sms using default intent
-      //  var success = function () { alert('Message sent successfully'); };
-       // var error = function (e) { alert('Message Failed:' + e); };
-        sms.send(number, message, intent);
-    }
-};
-	
-	function ini_route(j) {
-        directionsDisplay = new google.maps.DirectionsRenderer();
-        var myLoc = new google.maps.LatLng(x,y);
-        var myOptions = {
-            zoom: 15,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            center: myLoc
-        }
-        map2 = new google.maps.Map(document.getElementById("route_canvas"), myOptions);
-        directionsDisplay.setMap(map2);
-        calcRoute();
-		getDrive(j);
-    }
-	
-	function calcRoute() {
-
-        var waypts = [];
-
-
-stop = new google.maps.LatLng(lat2,long2)
-        waypts.push({
-            location:stop,
-            stopover:true});
-
-
-        start  = new google.maps.LatLng(x,y);
-        end = new google.maps.LatLng(lat2,long2);
-        var request = {
-            origin: start,
-            destination: end,
-            waypoints: waypts,
-            optimizeWaypoints: true,
-            travelMode: google.maps.DirectionsTravelMode.WALKING
-        };
-        directionsService.route(request, function(response, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-                directionsDisplay.setDirections(response);
-                var route = response.routes[0];
-
-            }
-        });
-    }
-
-	//showDiv();
-	
-	var config = {
-    title: "Select a City", 
-    items: [
-        { text: "California", value: "California" },
-        { text: "Phoenix", value: "Phoenix" },
-        { text: "San Jose", value: "San Jose" },
-        { text: "Chicago", value: "Chicago" },
-        { text: "Denver", value: "Denver" },
-        { text: "New York", value: "New York" },  
-	 { text: "Washington", value: "Washington" }, 
-	{ text: "Austin", value: "Austin" }, 
-        { text: "Las Vegas", value: "Las Vegas" }   
-    ],
-    selectedValue: "papaya",
-    doneButtonLabel: "Done",
-    cancelButtonLabel: "Cancel"
-};
-	
-// Show the picker
-	function showLst()
-	{
-window.plugins.listpicker.showPicker(config, 
-    function(item) { 
-        alert("You have selected " + item);
-    },
-    function() { 
-        alert("You have cancelled");
-    }
-);
-	}	
-	function getDrive(dHotel)
-	{
-		
-	var directionsService = new google.maps.DirectionsService();
-         var directionsDisplay = new google.maps.DirectionsRenderer();
-    
-         var map = new google.maps.Map(document.getElementById('route_canvas'), {
-           zoom:7,
-           mapTypeId: google.maps.MapTypeId.ROADMAP
-         });
-        
-         directionsDisplay.setMap(map);
-         directionsDisplay.setPanel(document.getElementById('panel'));
-      	origin  = new google.maps.LatLng(x,y);
-        destination = new google.maps.LatLng(lat2,long2);
-         var request = {
-		 
-           origin: origin, 
-           destination: destination,
-           travelMode: google.maps.DirectionsTravelMode.DRIVING
-         };
-    
-         directionsService.route(request, function(response, status) {
-           if (status == google.maps.DirectionsStatus.OK) {
-             directionsDisplay.setDirections(response);
-           }
-         });
-	}
-	function speechStart()
-	{
-		//alert(x+'  '+y);
-		//navigator.geocoder.reverseGeocodeLocation(x,y,success,failure);
-		//alert(addr_start);
-	
-		var node = document.getElementById('panel'),
-		htmlContent = node.innerHTML,
-		textContent = node.textContent;
-		textContent=textContent.replace(addr,'');
-		//textContent=textContent.replace(s1,'');
-		//alert(destination);
-		alert(textContent);
-	window.plugins.tts.speak(textContent);
-	}
-	
-	
-	function success(result) {
-    addr_start=result; // ...
-}
-function failure() {
-  // ...
-}
-	
-	
-	function startupWin(result) {
-		// When result is equal to STARTED we are ready to play
-		if (result == TTS.STARTED) {
-			//window.plugins.tts.getLanguage(win, fail);
-			//window.plugins.tts.speak("The text to speech service is ready");
-            window.plugins.tts.isLanguageAvailable("en_US", function() {
-                addLang("en_US", "English (American)");
-            }, fail);
-            window.plugins.tts.isLanguageAvailable("en_GB", function() {
-                addLang("en_GB", "English (UK)");
-            }, fail);
-            window.plugins.tts.isLanguageAvailable("fr", function() {
-                addLang("fr", "French");
-            }, fail);
-            window.plugins.tts.isLanguageAvailable("de", function() {
-                addLang("de", "German");
-            }, fail);
-            window.plugins.tts.isLanguageAvailable("it", function() {
-                addLang("it", "Italian");
-            }, fail);
-            window.plugins.tts.isLanguageAvailable("es", function() {
-                addLang("es", "Spanish");
-            }, fail);
-		}
-    }
-	
-	function addLang(loc, lang) {
-	//	var langs = document.getElementById('langs');
-	//	var langOption = document.createElement("OPTION") 
-	//	langOption.innerText = lang; 
-	//	langOption.value = loc;
-     //   langs.options.add(langOption); 
-	}
-	
-	function changeLang() {
-//		var yourSelect = document.getElementById('langs');
-      //  window.plugins.tts.setLanguage(yourSelect.options[yourSelect.selectedIndex].value, win, fail);
-	}
-	
-	function win(result) {
-		console.log(result);
-	}
-    
-    function fail(result) {
-        console.log("Error = " + result);
-    }
 	
 			
 </script>
@@ -602,13 +332,7 @@ body, html {
     overflow:scroll;
     
 }
-    #map1 {
-    width: 100%;
-    height: 65.85%;
-    position: fixed;
-    display: block;
-    z-index: 10;
-}
+   
  .hideDontTakeUpSpace
         {
             display:none;
@@ -658,20 +382,11 @@ body, html {
 }
 .btn1 {  background-color: transparent; border: 0; padding: 0; font-weight: bold;}
 	
-	.optgroup { font-size:10px; }
-.map {
-    position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
-}
-.map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
+.optgroup { font-size:10px; }
+
+#map_container {position: relative;}
+
+#map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
 </style>
 	</head>
 <body onload='checkConnection()';>
@@ -694,11 +409,7 @@ body, html {
 	<div id='inTab'>
 		
 	</div>
-	 <div style="width: 300px;">
-         <div id='route_canvas' style='width:200px;height:400px;float: left;'></div> 
-         <div id="panel" style="font-family:arial;font-size:12px;width: 100px; float: right;">
-		 </div>
-       </div>
+	 
 	
 	
 <div id='ajaxDiv' class="hideDontTakeUpSpace">Your result will display here</div>
