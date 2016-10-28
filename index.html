@@ -305,21 +305,22 @@ html, body, .container-fluid,#map {
 }
 .container-fluid {
     width:100%;
-    position:absolute;
+    position:fixed;
     top:0;
     padding:0;
 }
 #map {
-    border-top:50px solid #fff;
-    border-bottom:20px solid #fff;
+    border-top:50px solid #003366;
+    border-bottom:1px solid #fff;
 }
 </style>
 	</head>
 <body onload='checkConnection()';>
-	<table width="100%"  cellspacing='0' cellpadding='0'>
+	<!--<table width="100%"  cellspacing='0' cellpadding='0'>
 			<tr height='40px' bgcolor="#003366"><td colspan=2 align='center'><font face='arial' color='white'><b>DIVE</b></font></td></tr>
 		
-	</table>
+	</table>-->
+	
 <div class="container-fluid">
     <div id="map" class="map"></div>
 </div>
