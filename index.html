@@ -120,7 +120,7 @@ function ajaxCall() {
         request.onreadystatechange = function() {//Call a function when the state changes. 
                 if(request.readyState == 4 && request.status == 200) { 
                      //   alert("response: "+request.responseText);
-			document.getElementById("ajaxDiv").innerHTML = request.responseText;
+			//document.getElementById("ajaxDiv").innerHTML = request.responseText;
 			document.getElementById('rest1').value=request.responseText;
 			procVal();
                 } 
@@ -370,20 +370,9 @@ body, html {
 		display:none;
 		
 	}
-	div#titleBar > select {
-     float: right;
- }
- h6 {
-     display: inline;
- }
- #titleBar {
-    border: none;
-   
-}
+	
 .btn1 {  background-color: transparent; border: 0; padding: 0; font-weight: bold;}
 	
-.optgroup { font-size:10px; }
-
 #map_container {position: relative;}
 
 #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
@@ -395,25 +384,10 @@ body, html {
 		
 	</table>
 		
-<div id="map" style="position:fixed;width:100%;height:500px;">
-<div class="map">
-<iframe></iframe>
+<div id="map">
+
 </div>	
-	</div>
-	<div id="lst_mnu">
-		
-	</div>
-	<div id="smsBar">
-		
-		</div>
-	<div id='inTab'>
-		
-	</div>
-	 
 	
-	
-<div id='ajaxDiv' class="hideDontTakeUpSpace">Your result will display here</div>
-<textarea id="tmpD"  class="hideDontTakeUpSpace" rows=1 cols=50></textarea>
 <textarea id="rest1" class="hideDontTakeUpSpace" rows=1 cols=50></textarea>
 </body>
 		</html>
