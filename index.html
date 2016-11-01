@@ -74,6 +74,10 @@
 	{
 	navigator.app.exitApp();
 	}
+	function alertDismissed2()
+	{
+	navigator.app.exitApp();
+	}
 		function onDeviceReady()
 		{
 		
@@ -164,7 +168,12 @@ function myMap(position) {
 	// alert(document.getElementById("rest1").value.length);
 	if(document.getElementById("rest1").value.length==1)
 	{
-		alert('No DIVE joints found....');
+		 navigator.notification.alert(
+            'Oops..! No DIVE Joints found...',  // message
+            alertDismissed2,         // callback
+            'DIVE Joints',            // title
+            'OK'                  // buttonName
+        );
 	}
 	else
 	{
