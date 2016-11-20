@@ -23,7 +23,6 @@
   <preference name="android-build-tool" value="gradle" /> 
   <gap:plugin name="cordova-plugin-admobpro" source="npm" />
   <preference name="android-installLocation" value="auto"/>
-  <plugin name="fr.louisbl.cordova.gpslocation" spec="0.1.0" source="pgb" />
   <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" />
   <gap:plugin name="cordova-plugin-spinnerdialog" source="npm" />
   <gap:plugin name="cordova-plugin-listpicker" source="npm" />
