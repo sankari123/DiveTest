@@ -26,9 +26,7 @@
   <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" />
   <gap:plugin name="cordova-plugin-spinnerdialog" source="npm" />
   <gap:plugin name="cordova-plugin-listpicker" source="npm" />
-  <plugin name="com.cordova.plugins.sms" spec="0.1.2" source="pgb" />
-  <plugin name="org.tt.plugin.tts" spec="1" source="pgb" />
-  
+    
   <icon src="icon.png"/>
   <icon src="icon_ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="icon_mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
