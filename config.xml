@@ -27,7 +27,6 @@
   <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" />
   <gap:plugin name="cordova-plugin-spinnerdialog" source="npm" />
   <gap:plugin name="cordova-plugin-listpicker" source="npm" />
-  <plugin name="fr.louisbl.cordova.gpslocation" spec="0.1.0" source="npm" /> 
   <icon src="icon.png"/>
   <icon src="icon_ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="icon_mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
