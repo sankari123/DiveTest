@@ -44,7 +44,7 @@
   <gap:plugin name="org.apache.cordova.network-information" source="npm" />
   <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
   <gap:plugin name="org.apache.cordova.vibration" source="npm" />
-  <gap:plugin name="fr.louisbl.cordova.gpslocation" />
+  <gap:plugin name="fr.louisbl.cordova.gpslocation" spec="0.1.0" />
   <gap:plugin name="cordova-plugin-spinnerdialog" source="npm" />
   <gap:plugin name="cordova-plugin-listpicker" source="npm" />
   <plugin name="com.teamnemitoff.phonedialer" spec="0.3.0" source="npm" />
