@@ -25,12 +25,8 @@
   <plugin name="cordova-background-geolocation-lt" source="npm" />
   <preference name="android-installLocation" value="auto"/>
   <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" />
-  <gap:plugin name="cordova-plugin-spinnerdialog" source="npm" />
-  <gap:plugin name="cordova-plugin-listpicker" source="npm" />
-  
-  
-  
-   <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
+   
+  <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
   <gap:plugin name="org.apache.cordova.camera" source="npm" />
   <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
   <gap:plugin name="org.apache.cordova.console" source="npm" />
