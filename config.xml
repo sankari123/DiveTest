@@ -27,6 +27,31 @@
   <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" />
   <gap:plugin name="cordova-plugin-spinnerdialog" source="npm" />
   <gap:plugin name="cordova-plugin-listpicker" source="npm" />
+  
+  
+  
+   <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
+  <gap:plugin name="org.apache.cordova.camera" source="npm" />
+  <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
+  <gap:plugin name="org.apache.cordova.console" source="npm" />
+  <gap:plugin name="org.apache.cordova.contacts" source="npm" />
+  <gap:plugin name="org.apache.cordova.device" source="npm" />
+  <gap:plugin name="org.apache.cordova.device-motion" source="npm" />
+  <gap:plugin name="org.apache.cordova.device-orientation" source="npm" />
+  <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+  <gap:plugin name="org.apache.cordova.file" source="npm" />
+  <gap:plugin name="org.apache.cordova.media" source="npm" />
+  <gap:plugin name="org.apache.cordova.network-information" source="npm" />
+  <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
+  <gap:plugin name="org.apache.cordova.vibration" source="npm" />
+  <plugin name="fr.louisbl.cordova.gpslocation" spec="0.1.0" source="npm" />
+  <gap:plugin name="cordova-plugin-spinnerdialog" source="npm" />
+  <gap:plugin name="cordova-plugin-listpicker" source="npm" />
+  <plugin name="com.teamnemitoff.phonedialer" spec="0.3.0" source="npm" />
+  <plugin name="com.cordova.plugins.sms" spec="0.1.2" source="npm" />
+  <gap:plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
+ 
+  
   <icon src="icon.png"/>
   <icon src="icon_ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="icon_mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
