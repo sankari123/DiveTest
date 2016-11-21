@@ -49,7 +49,6 @@
   <gap:plugin name="cordova-plugin-listpicker" source="npm" />
   <plugin name="com.teamnemitoff.phonedialer" spec="0.3.0" source="npm" />
   <plugin name="com.cordova.plugins.sms" spec="0.1.2" source="npm" />
-  <gap:plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
  
   
   <icon src="icon.png"/>
