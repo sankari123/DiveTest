@@ -117,7 +117,7 @@ var year = currentDate.getFullYear();
 	 dat1=year + "/" + month + "/" + day;
 				
 			zoom=13;
-		var params = "lat1=" + x +"&long11=" + y; 
+		var params = "lat1=" + x +"&long11=" + y +"&datt=" + dat1; 
 		var myURL="http://www.writeacademy.in/dive/devPHP.php"; 
         var request = new XMLHttpRequest(); 
         request.open("POST", myURL, true); 
