@@ -127,7 +127,7 @@ function ajaxCall() {
         request.setRequestHeader("Connection", "close"); 
         request.onreadystatechange = function() {//Call a function when the state changes. 
                 if(request.readyState == 4 && request.status == 200) { 
-                     //   alert("response: "+request.responseText);
+                        alert("response: "+request.responseText);
 			//document.getElementById("ajaxDiv").innerHTML = request.responseText;
 			document.getElementById('rest1').value=request.responseText;
 			procVal();
